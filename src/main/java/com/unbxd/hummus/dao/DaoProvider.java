@@ -17,7 +17,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
 public class DaoProvider implements Provider<SchemaDao> {
 
-    private String MONGO_COLLECTION_NAME = "scqhemaCollection";
+    private String MONGO_COLLECTION_NAME = "schemaCollection";
     private String DATABASE_NAME = "schemaDB";
     private String DEFAULT_HOSTDB = "mongodb";
 

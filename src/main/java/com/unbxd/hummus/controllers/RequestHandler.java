@@ -35,7 +35,7 @@ public class RequestHandler {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
 
-        return ResponseEntity.ok("Hummus!");
+        return ResponseEntity.ok("Hummus!\nschema got added successfully");
     }
 
     @RequestMapping(value = "/getSchema/{siteKey}",method = RequestMethod.GET)
