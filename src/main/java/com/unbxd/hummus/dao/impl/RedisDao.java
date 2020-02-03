@@ -32,7 +32,7 @@ public class RedisDao implements SchemaDao {
  public Schema get(String siteKey) throws  DaoException , SchemaNotFoundException{
      String data = redisClient.get(siteKey);
      if(data == null)
-        throw new SchemaNotFoundException("schema not found for the siteKey : " + siteKey);
+        throw new SchemaNotFoundException();
      JavaType type = mapper.constructType(Schema.class);
      try {
          return mapper.readValue(data, type);

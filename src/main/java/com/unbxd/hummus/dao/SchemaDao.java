@@ -1,5 +1,6 @@
 package com.unbxd.hummus.dao;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.unbxd.hummus.execptions.DaoException;
 import com.unbxd.hummus.execptions.SchemaNotFoundException;
 import com.unbxd.hummus.model.Schema;

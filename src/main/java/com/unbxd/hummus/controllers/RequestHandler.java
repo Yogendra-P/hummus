@@ -19,12 +19,12 @@ public class RequestHandler {
     private SchemaService schemaService;
 
     @RequestMapping("/")
-    String hello() {
+    String ping() {
         return "Hummus!";
     }
 
     @RequestMapping(value = "/addSchema",method = RequestMethod.POST)
-    ResponseEntity addSchema(@RequestBody Schema schema) {
+    ResponseEntity<String> addSchema(@RequestBody Schema schema) {
         try {
             schemaService.addSchema(schema);
         }

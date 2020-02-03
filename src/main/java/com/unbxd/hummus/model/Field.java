@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Field {
-    String name;
-    String dataType;
-    String id;
+    private String name;
+    private String dataType;
+    private String id;
 }

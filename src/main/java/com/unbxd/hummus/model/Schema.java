@@ -11,7 +11,6 @@ import java.util.List;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Schema {
-    @NonNull
-    String siteKey;
-    List<Field> fields;
+    private String siteKey;
+    private List<Field> fields;
 }
