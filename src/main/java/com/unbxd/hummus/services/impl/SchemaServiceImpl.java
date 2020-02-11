@@ -13,8 +13,13 @@ import com.unbxd.hummus.services.SchemaService;
 import java.util.List;
 
 public class SchemaServiceImpl implements SchemaService {
-    @Inject
+
     private SchemaDao schemaDao;
+
+    @Inject
+    public SchemaServiceImpl(SchemaDao schemaDao) {
+        this.schemaDao = schemaDao;
+    }
 
     public void addSchema(Schema schema) throws ServiceException , ValidationException {
         validateSchema(schema);
@@ -35,13 +40,13 @@ public class SchemaServiceImpl implements SchemaService {
        }
     }
 
-    public void validateSchema(Schema schema) throws ValidationException {
+    private void validateSchema(Schema schema) throws ValidationException {
         if(schema.getSiteKey() == null)
             throw new ValidationException("siteKey is missing in Schema");
         validateFields(schema.getFields());
     }
 
-    public void validateFields(List<Field> fields) throws ValidationException {
+    private void validateFields(List<Field> fields) throws ValidationException {
         if(fields == null || fields.isEmpty())
             throw new ValidationException("fields are missing in Schema");
         for (Field field : fields) {

@@ -15,8 +15,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class RequestHandler {
 
-    @Autowired
+
     private SchemaService schemaService;
+
+    @Autowired
+    public RequestHandler(SchemaService schemaService) {
+        this.schemaService = schemaService;
+    }
 
     @RequestMapping("/")
     String ping() {

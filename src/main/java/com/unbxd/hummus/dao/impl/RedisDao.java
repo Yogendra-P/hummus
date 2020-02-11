@@ -3,7 +3,6 @@ package com.unbxd.hummus.dao.impl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mongodb.MongoClientException;
 import com.unbxd.hummus.dao.SchemaDao;
 import com.unbxd.hummus.execptions.DaoException;
 import com.unbxd.hummus.execptions.SchemaNotFoundException;
