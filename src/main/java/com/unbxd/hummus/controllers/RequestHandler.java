@@ -41,6 +41,7 @@ public class RequestHandler {
         }
 
         return ResponseEntity.ok("Hummus!\nschema got added successfully");
+        // testing 
     }
 
     @RequestMapping(value = "/getSchema/{siteKey}",method = RequestMethod.GET)
